@@ -1,0 +1,15 @@
+TECHVISTRA: automatic collection and QR verification update
+
+The Downloads app has already been updated on this laptop.
+Stop an existing Food Desk server and reopen Mac - Check and Open.command.
+Refresh any counter phone pages so they load the updated scanner.
+
+For another installation, close Food Desk and copy the app files from this ZIP over the matching app files. Preserve app/data and its configuration, database and certificates.
+
+A valid first real student scan automatically saves collection. Hand food over only after COLLECTION SAVED appears. Repeat scans show the original date/time in IST and counter. Test/demo QRs never automatically collect a real meal.
+
+Modified or unauthorized signed QR codes are rejected. An exact copy of a genuine QR carries the same authorization: compare the displayed student identity. Counters sharing one laptop share duplicate protection; separate offline laptops do not synchronize collection history.
+
+Validation: 12 Python tests passed, including real signed QR HTTP tests, tampering, unauthorized signing key, concurrent duplicate scans, database reopen and original timestamps. JavaScript scanner tests and syntax check passed.
+
+This update contains no configuration secrets or student data.

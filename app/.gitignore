@@ -1,0 +1,9 @@
+data/*
+!data/.gitkeep
+__pycache__/
+*.pyc
+
+# Optional trusted LAN TLS certs and private keys
+*.pem
+*.key
+*.crt

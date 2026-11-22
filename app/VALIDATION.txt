@@ -1,0 +1,37 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.130s
+
+OK
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/setup HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/login HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/create-counter HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/create-counter HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/login HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/heartbeat HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 403 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/students HTTP/1.1" 403 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/login HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/heartbeat HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 403 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/students HTTP/1.1" 403 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/check HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/check HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/redeem HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/redeem HTTP/1.1" 409 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/my-device HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/my-device HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/check HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/logout HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "POST /api/login HTTP/1.1" 200 -
+[14/Nov/2026 21:51:52] 127.0.0.1 "GET /api/live HTTP/1.1" 200 -
+
+PASS: desktop live dashboard, automatic device refresh, phone scanner-only UI, device counts, no JavaScript errors
+Mac and Windows native execution: not tested in this Linux environment.
+
+v8.1: 4 startup regression tests passed; setup --check-only passed under venv; integration flow passed again.
+
+v8.2: Fresh-admin-setup browser regression passed: mismatch feedback, account creation, transition to login and successful dashboard login. Hidden username is disabled during setup; hidden confirmation is disabled during login.

@@ -1,0 +1,14 @@
+PIN-protected QR restoration
+
+Restart Food Desk, then refresh student directory and counter phone pages.
+For collected students click Restore QR, enter your administrator PIN, and confirm. The pass is enabled for one additional successful collection. After the counter scans, duplicate blocking resumes. A wrong PIN does not change the pass. Only an administrator on the laptop can perform this action.
+
+Unused passes retain Revoke / Restore, now protected by the same PIN.
+
+The PIN is verified on the server using a salted hash and is not included in the browser code or audit messages. Five incorrect attempts lock PIN actions for ten minutes.
+
+Original collection records are retained. Allowing a new scan does not refund meal stock; every successful extra collection counts as another meal. Signature, expiry, venue, attendance and stock checks remain required. Collection times are displayed in IST. CSV includes collection count and whether another collection is permitted.
+
+The local Downloads app is already updated. To apply this ZIP elsewhere, close Food Desk and replace its matching app source files. Preserve app/data and existing keys, database and certificates. Startup adds the history schema without clearing data.
+
+Validation: 13 Python tests and JavaScript scanner, directory and PIN-dialog checks passed. Includes wrong PIN, counter access denied, one-use permission, simultaneous scan protection, retained original timestamp, stock preservation and retry lockout.

@@ -1,0 +1,6 @@
+# Install this ONCE before event day; never downloaded by local server.
+cryptography>=42,<49
+# Optional: QR photos, if installed ahead of time
+qrcode[pil]>=7.4
+numpy>=1.26
+opencv-python-headless>=4.8

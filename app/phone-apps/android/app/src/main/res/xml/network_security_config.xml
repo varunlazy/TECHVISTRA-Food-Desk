@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Only the event LAN server address may be entered in the app UI.
+         Cleartext is allowed for that local connection. Do not distribute this
+         internal-use app to untrusted devices or use on public Wi-Fi. -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

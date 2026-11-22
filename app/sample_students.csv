@@ -1,0 +1,6 @@
+register_number,student_name,department,section,email,food_type,attendance_status,qr_token
+DEMO2026001,Demo Student One,DS & AI,A,demo1@example.invalid,VEG,present,RjU_49MbMuwV0-E1CfmdMafvjVKOPA-0
+DEMO2026002,Demo Student Two,CSE,B,demo2@example.invalid,NON-VEG,present,iYfvqkPiRDOf6J7NKFtLpWL78u3DquLO
+DEMO2026003,Demo Student Three,ECE,A,demo3@example.invalid,VEG,present,SkP9rJCEun-AzOvyyWgrFRA5ST8s0OKD
+DEMO2026004,Demo Student Four,DS & AI,B,demo4@example.invalid,NON-VEG,absent,5wYV1y8SLa810q5c3m1b21UATPgnp9T2
+DEMO2026005,Demo Student Five,IT,C,demo5@example.invalid,VEG,present,JhyqcIH9KHWZC1Bn8imVrbla5xPEnwJM

@@ -1,0 +1,11 @@
+Windows scan repair
+
+Close the Food Desk server window before replacing files.
+Extract this ZIP INSIDE the existing Food Desk folder (the folder containing app and Windows - Check and Open.bat). Replace matching code files. Preserve app/data. This ZIP contains no database, configuration keys or student data.
+Run Windows - Check and Open.bat again. In the browser press Ctrl+Shift+R. Scan a fresh real website QR.
+
+This cumulative code update keeps the previous configuration, automatic collection, IST display, and PIN-protected Restore QR features.
+The QR verifier and server time formatter no longer require the IANA timezone database, which may be absent from Windows Python installations. Current IST is calculated as UTC+05:30.
+Unexpected API failures now return a specific error reference and write app/data/request-error.log, rather than silently dropping the connection. If a collection request is interrupted, rescan to confirm whether it saved.
+
+Validated: timezone-database failure reproduced before fix; timezone-disabled verification regression passed after fix; 13 existing Python tests, additional Windows regression, and JavaScript scanner/directory/PIN checks passed. The remote Windows machine has not been directly tested.

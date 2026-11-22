@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#091325">
+  <meta name="description" content="TECHVISTRA 2026 Offline Food Distribution Desk">
+  <title>TECHVISTRA '26 — Food Desk</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="toast-area" role="status" aria-live="polite"></div>
+  <section id="auth-screen" class="auth-layout">
+    <div class="auth-left">
+      <div class="wordmark"><div class="brand-mark">T<span>✦</span></div><div>TECHVISTRA <span>'26</span><small>SMART FOOD DISTRIBUTION</small></div></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="mini-dot"></span> OFFLINE · SECURE · FAST</div>
+        <h1>Every meal.<br><em>One secure scan.</em></h1>
+        <p>A fast, reliable food distribution system for campus events. Identify students, check meal type and prevent duplicate collection — even when internet is unavailable.</p>
+      </div>
+      <div class="feature-cards">
+        <div><span>◈</span><b>One-time QR</b><small>No duplicate meals</small></div>
+        <div><span>▣</span><b>All counters in sync</b><small>One local database</small></div>
+        <div><span>◉</span><b>Live totals</b><small>Veg / Non-Veg reports</small></div>
+      </div>
+      <div class="auth-footer">TECHVISTRA '26 · LOCAL NETWORK SOFTWARE</div>
+    </div>
+    <div class="auth-right">
+      <div class="login-card">
+        <div class="login-symbol">◈</div>
+        <div class="eyebrow">SECURE LOCAL ACCESS</div>
+        <h2 id="auth-title">Welcome back</h2>
+        <p class="muted" id="auth-description">Sign in to your offline food distribution desk.</p>
+        <form id="login-form" class="field-stack">
+          <label id="username-wrap">Username<input id="login-username" placeholder="Staff username or admin" autocapitalize="off" autocomplete="username" required></label>
+          <label>Device label (for example, Phone 1 · Veg desk)<input id="device-name" maxlength="60" autocomplete="off" placeholder="Name this phone or laptop"></label>
+          <label>Password<input id="login-password" type="password" autocomplete="current-password" required></label>
+          <label id="confirm-wrap" class="hidden">Confirm password<input id="confirm-password" type="password" autocomplete="new-password"></label>
+          <button class="btn primary full" type="submit" id="login-submit">Sign in <span>→</span></button>
+        </form>
+        <p class="auth-tip">Your data stays on the event laptop. No cloud connection is required.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="app-screen" class="shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="wordmark wordmark-side"><div class="brand-mark">T<span>✦</span></div><div>TECHVISTRA <span>'26</span><small>OFFLINE FOOD DESK</small></div></div>
+      <div class="side-label">WORKSPACE</div>
+      <nav id="main-nav" class="nav-links" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="network-box"><span class="mini-dot"></span> <div><b>Local network mode</b><small id="network-note">Connected to event server</small></div></div>
+        <button class="logout" id="logout-button">⇥ &nbsp; Sign out</button>
+      </div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <div class="top-title"><button id="menu-toggle" aria-label="Toggle menu" class="icon-btn mobile-only">☰</button><div id="breadcrumb">Overview</div></div>
+        <div class="top-right"><span id="connection-pill" class="pill ok"><span class="mini-dot"></span> Local server connected</span><div class="user-chip"><span id="avatar-letter">A</span><div><b id="user-name">Admin</b><small id="user-role">Administrator</small></div></div></div>
+      </header>
+      <main class="content" id="content" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true"><div class="modal" id="modal-content"></div></div>
+  <script src="/static/jsQR-1.4.0.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

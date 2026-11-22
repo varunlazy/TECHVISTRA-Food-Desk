@@ -1,0 +1,27 @@
+# Local files / keys / private event data — never commit
+.DS_Store
+__MACOSX/
+._*
+app/.venv/
+.venv/
+**/__pycache__/
+*.py[cod]
+app/data/*
+!app/data/.gitkeep
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.log
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+website-qr-setup.json
+website-qr-config.json
+website-qr-setup-private.json
+.env
+.env.*
+!.env.example
