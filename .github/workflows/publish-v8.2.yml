@@ -1,0 +1,44 @@
+name: Publish Food Desk v8.2
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-v8.2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Create release and upload source ZIP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release source
+        uses: actions/checkout@v4
+
+      - name: Create distributable source ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          git archive --format=zip --prefix=TECHVISTRA-Food-Desk-v8.2/ HEAD -o dist/TECHVISTRA-Food-Desk-v8.2.zip
+          sha256sum dist/TECHVISTRA-Food-Desk-v8.2.zip > dist/SHA256SUMS.txt
+
+      - name: Publish GitHub v8.2 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v8.2 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release v8.2 already exists; not publishing a duplicate."
+            exit 0
+          fi
+          gh release create v8.2 \
+            dist/TECHVISTRA-Food-Desk-v8.2.zip \
+            dist/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "TECHVISTRA Food Desk v8.2" \
+            --notes-file RELEASE_NOTES.md
